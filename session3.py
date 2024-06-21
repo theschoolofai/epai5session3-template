@@ -30,8 +30,11 @@ def manual_truncation_function(f_num):
     This function emulates python's MATH.TRUNC method. It ignores everything after the decimal point. 
     It must check whether f_num is of correct type before proceed. You can use inbuilt constructors like int, float, etc
     '''
-
-    return f_num
+    if isinstance(f_num,(int,float)):
+        res=int(f_num)
+    else:
+        print("TypeError: The input is of wrong type")
+    return res
 
 def manual_rounding_function(f_num):
     '''
